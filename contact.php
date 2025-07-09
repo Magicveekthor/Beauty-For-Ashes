@@ -77,7 +77,7 @@ if(isset($_POST['submit'])) {
                 <div class="main-menu-wrapper clearfix">
                     <div class="main-menu-wrapper__left">
                         <div class="main-menu-wrapper__logo">
-                            <a href="index.html"><img src="assets/images/resources/logo.png" alt="" style="height: 100px;"></a>
+                            <a href="index.html" aria-label="Logo"><img src="assets/images/resources/logo.png" alt=""></a>
                         </div>
                         <div class="main-menu-wrapper__call">
                             <div class="main-menu-wrapper__call-icon">
@@ -90,7 +90,7 @@ if(isset($_POST['submit'])) {
                         </div>
                     </div>
                     <div class="main-menu-wrapper__main-menu">
-                        <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                        <a href="#" class="mobile-nav__toggler" aria-label="Links"><i class="fa fa-bars"></i></a>
                         <ul class="main-menu__list">
                             <li class="dropdown megamenu">
                                 <a href="index.html">Home</a>
@@ -100,9 +100,6 @@ if(isset($_POST['submit'])) {
                             </li>
                             <li class="dropdown">
                                 <a href="gallery.html">Gallery</a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="testimonies.html">Testimonies</a>
                             </li>
                             <li class="dropdown">
                                 <a href="become-volunteer.php">Volunteer</a>
