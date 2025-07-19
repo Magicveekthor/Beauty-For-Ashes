@@ -105,7 +105,7 @@ if(isset($_POST['submit'])) {
                                 <a href="become-volunteer.php">Volunteer</a>
                             </li>
                             <li class="dropdown">
-                                <a href="donate-now.html">Donations</a>
+                                <a href="donate-now.php">Donations</a>
                             </li>
                             <!-- <li class="dropdown">
                                 <a href="blog.html">Blog</a>
@@ -114,7 +114,7 @@ if(isset($_POST['submit'])) {
                         </ul>
                     </div>
                     <div class="main-menu-wrapper__right">
-                        <a href="donate-now.html" class="donate-btn main-menu-wrapper__btn"> <i class="fa fa-heart"></i>Donate Now</a>
+                        <a href="donate-now.php" class="donate-btn main-menu-wrapper__btn"> <i class="fa fa-heart"></i>Donate Now</a>
                     </div>
                 </div>
             </nav>
@@ -220,7 +220,7 @@ if(isset($_POST['submit'])) {
                                     <p class="footer-widget__about-text">Your Donations can Change their Daily Life
                                         Style</p>
                                 </div>
-                                <a href="donate-now.html" class="donate-btn footer-donate__btn"> <i
+                                <a href="donate-now.php" class="donate-btn footer-donate__btn"> <i
                                         class="fa fa-heart"></i>
                                     Donate Now</a>
                             </div>
