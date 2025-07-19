@@ -3083,7 +3083,7 @@ ul {
 }
 
 .welcome-one__right .section-title {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .welcome-one__right .section-title__tagline:before {
@@ -5829,6 +5829,7 @@ ul {
   flex-wrap: wrap;
   gap: 20px; /* spacing between items */
   margin-bottom: 15px;
+  margin-left: 50px;
 }
 
 .about-one__points li {
@@ -6217,9 +6218,9 @@ ul {
   position: absolute;
   top: 0;
   left: 0;
-  width: 807px;
-  height: 626px;
-  background-image: url(../images/backgrounds/testimonial-two-bg.png);
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/profile_images/DSC_3034.jpg);
   background-repeat: no-repeat;
   background-position: top left;
   background-size: cover;
@@ -9696,7 +9697,8 @@ ul {
 .comment-form__input-box input[type="password"],
 .comment-form__input-box select,
 .comment-form__input-box input[type="search"],
-.comment-form__input-box input[type="email"] {
+.comment-form__input-box input[type="email"], 
+.comment-form__input-box input[type="number"] {
   height: 64px;
   width: 100%;
   border: none;
@@ -10733,7 +10735,8 @@ ul {
 }
 
 .donate-now__personal-info-input input[type="text"],
-.donate-now__personal-info-input input[type="email"] {
+.donate-now__personal-info-input input[type="email"],
+.donate-now__personal-info-input input[type="number"] {
   height: 64px;
   width: 100%;
   border: none;
@@ -10743,6 +10746,23 @@ ul {
   font-size: 14px;
   padding: 0 30px;
   border-radius: var(--pifoxen-bdr-radius);
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"]:focus::-webkit-outer-spin-button,
+input[type="number"]:focus::-webkit-inner-spin-button,
+input[type="number"]:focus::-moz-appearance {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.form-button {
+  border: none;
 }
 
 .donate-now__personal-info-input textarea {
@@ -11198,7 +11218,8 @@ ul {
 }
 
 .become-volunteer__input input[type="text"],
-.become-volunteer__input input[type="email"] {
+.become-volunteer__input input[type="email"],
+.become-volunteer__input input[type="number"] {
   height: 64px;
   width: 100%;
   border: none;
@@ -12748,7 +12769,8 @@ ul {
 }
 
 .review-form-one__input-box input[type="text"],
-.review-form-one__input-box input[type="email"] {
+.review-form-one__input-box input[type="email"],
+.review-form-one__input-box input[type="number"] {
   height: 64px;
   width: 100%;
   border: none;
@@ -13103,7 +13125,8 @@ ul {
 
 .billing_input_box input[type="text"],
 .billing_input_box input[type="email"],
-.billing_input_box input[type="tel"] {
+.billing_input_box input[type="tel"],
+.billing_input_box input[type="number"]  {
   height: 64px;
   width: 100%;
   border: none;

@@ -8,100 +8,45 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/resources/logo.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/resources/logo.png" />
     <meta name="description" content="Beauty For Ashes" />
-
+        
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&amp;display=swap" rel="stylesheet">
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;family=Fredoka+One&amp;display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
-    <link rel="stylesheet" href="assets/vendors/animate/custom-animate.css" />
-    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
-    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
-    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
-    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.min.css" />
-    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.pips.css" />
-    <link rel="stylesheet" href="assets/vendors/odometer/odometer.min.css" />
-    <link rel="stylesheet" href="assets/vendors/swiper/swiper.min.css" />
-    <link rel="stylesheet" href="assets/vendors/pifoxen-icons/style.css">
-    <link rel="stylesheet" href="assets/vendors/tiny-slider/tiny-slider.min.css" />
-    <link rel="stylesheet" href="assets/vendors/reey-font/stylesheet.css" />
-    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.carousel.min.css" />
-    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="assets/vendors/bxslider/jquery.bxslider.css" />
-    <link rel="stylesheet" href="assets/vendors/bootstrap-select/css/bootstrap-select.min.css" />
-    <link rel="stylesheet" href="assets/vendors/vegas/vegas.min.css" />
-    <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
-    <link rel="stylesheet" href="assets/vendors/timepicker/timePicker.css" />
-
-    <!-- template styles -->
-    <link rel="stylesheet" href="assets/css/pifoxen.css" />
-    <link rel="stylesheet" href="assets/css/pifoxen-responsive.css" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;family=Fredoka+One&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/feedback.css">
 </head>
-
 <body>
-    <div class="page-wrapper">
-
-        <!--Error Page Start-->
-        <section class="error-page">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="error-page__inner">
-                            <h2 class="error-page__title">Sent!</h2>
-                            <h3 class="error-page__tagline">Our team would get back to you as soon as possible!
-                            </h3>
-                            <a href="index.html" class="thm-btn error-page__btn mt-3">back to home</a>
-                        </div>
-                    </div>
-                </div>
+    <div id="container">
+        <div id="success-box">
+            <div class="face">
+                <div class="eye"></div>
+                <div class="eye right"></div>
+                <div class="mouth happy"></div>
             </div>
-        </section>
-        <!--Error Page End-->
+            <div class="shadow scale"></div>
+            <div class="message">
+                <h1 class="alert">Success!</h1>
+                <p>Yay, Everything is working.</p>
+            </div>
+            <button class="button-box"><h1 class="green">Continue</h1></button>
+        </div>
+
+        <div id="error-box">
+            <div class="face2">
+                <div class="eye"></div>
+                <div class="eye right"></div>
+                <div class="mouth sad"></div>
+            </div>
+            <div class="shadow move"></div>
+            <div class="message">
+                <h1 class="alert">Error!</h1>
+                <p>oh no, Something went wrong.</p>
+            </div>
+            <button class="button-box"><h1 class="red">Try Again</h1></button>
+        </div>
+    </div>
 
 
-    </div><!-- /.page-wrapper -->
-
-    <script> var url = 'https://widget.bot.space/js/widget.js'; var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url; var options = {"enabled":true,"chatButtonSetting":{"backgroundColor":"#13C656","ctaText":"Message Us","borderRadius":"25","marginLeft":"20","marginBottom":"20","marginRight":"20","position":"right"},"brandSetting":{"brandName":"Beauty For Ashes","brandSubTitle":"Typically replies within a day","brandImg":"https://scontent-los2-1.xx.fbcdn.net/v/t39.30808-6/417481299_122101234976235120_8063413191221499980_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFXvUIQY4KgicR72xAbs3vSG7DsCjFdCU8bsOwKMV0JT9gS6fKvZXy_d8qLpA7z4dnfmejvRjICIEbsE74ktrsF&_nc_ohc=ylc9MCtnu-0Q7kNvgG6rnXk&_nc_zt=23&_nc_ht=scontent-los2-1.xx&_nc_gid=AOS3eobNGLIY5yoftN-AQ3u&oh=00_AYCxCv2_t7t7W35kGcGTmgYohCaYa_A67hcYaBgT31JafQ&oe=673A766D","welcomeText":"Hi there! \nHow can I help you?","messageText":"Hello, I have a question.","backgroundColor":"#085E54","ctaText":"Start Chat","borderRadius":"25","autoShow":false,"phoneNumber":"234 816 686 9525"}}; s.onload = function() { CreateWhatsappChatWidget(options); }; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); </script>
-
-
-    <script src="assets/vendors/jquery/jquery-3.6.1.min.js"></script>
-    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendors/jarallax/jarallax.min.js"></script>
-    <script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
-    <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
-    <script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
-    <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
-    <script src="assets/vendors/nouislider/nouislider.min.js"></script>
-    <script src="assets/vendors/odometer/odometer.min.js"></script>
-    <script src="assets/vendors/swiper/swiper.min.js"></script>
-    <script src="assets/vendors/tiny-slider/tiny-slider.min.js"></script>
-    <script src="assets/vendors/wnumb/wNumb.min.js"></script>
-    <script src="assets/vendors/wow/wow.js"></script>
-    <script src="assets/vendors/isotope/isotope.js"></script>
-    <script src="assets/vendors/countdown/countdown.min.js"></script>
-    <script src="assets/vendors/owl-carousel/owl.carousel.min.js"></script>
-    <script src="assets/vendors/bxslider/jquery.bxslider.min.js"></script>
-    <script src="assets/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
-    <script src="assets/vendors/vegas/vegas.min.js"></script>
-    <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
-    <script src="assets/vendors/timepicker/timePicker.js"></script>
-
-
-
-
-    <!-- template js -->
-    <script src="assets/js/pifoxen.js"></script>
 </body>
-
-
-<!-- Mirrored from pifoxen-html.vercel.app/main-html/404.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 28 May 2024 22:13:23 GMT -->
 </html>

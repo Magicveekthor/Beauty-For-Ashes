@@ -192,6 +192,52 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="donate-now__personal-info-box">
+                            <h3 class="donate-now__title">Make Online Donation</h3>
+                            <form class="donate-now__personal-info-form" id="paymentForm">
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="donate-now__personal-info-input">
+                                            <label>Full Name</label>
+                                            <input type="text" placeholder="Enter Full Name" name="full_name" id="full_name" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="donate-now__personal-info-input">
+                                            <label>Email Address</label>
+                                            <input type="email" placeholder="Enter Email Address" name="email_address" id="email_address" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="donate-now__personal-info-input">
+                                            <label>Amount</label>
+                                            <input type="number" placeholder="Enter Amount" id="amount" name="amount" oninput="updateDisplayAmount()" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xl-12 mb-2">
+                                        <div id="displayAmount" class="text-lg font-bold text-gray-700"></div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-4">
+                                        <button type="submit" href="donate-now.html" class="thm-btn fundraishing__btn form-button">Donate</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <!--Donate Now End-->
@@ -373,5 +419,42 @@
 
     <!-- template js -->
     <script src="assets/js/pifoxen.js"></script>
+
+    <script src="https://js.paystack.co/v2/inline.js"></script>
+    <script>
+        paymentForm.addEventListener("submit", payWithPaystack, false);
+
+        function payWithPaystack(e) {
+            e.preventDefault();
+
+            let handler = PaystackPop.setup({
+                key: 'pk_live_14d2265eadf93e2ce24180515a926290e5f129dc',
+                email: document.getElementById("email_address").value,
+                amount :document.getElementById("amount").value * 100,
+                currency: "NGN",
+                payment_method: ["card", "ussd", "qr"],
+                callback: function(response) {
+                    window.location.href = "verify.php?reference" + response.reference;
+                },
+                onClose: function() {
+                    alert('Transaction was not completed, window closed');
+                }
+            });
+
+            handler.openIframe();
+        }
+    </script>
+    <script>
+        function updateDisplayAmount() {
+            const amount = document.getElementById("amount").value;
+            const display = document.getElementById("displayAmount");
+
+            if (amount && amount > 0) {
+                display.textContent=`Amount to Donate: ₦${Number(amount).toLocaleString()}`
+            } else {
+                display.textContent= "";
+            }
+        }
+    </script>
 </body>
 </html>

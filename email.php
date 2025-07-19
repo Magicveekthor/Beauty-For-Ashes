@@ -380,10 +380,10 @@ function sendvolunteer($name, $email, $phone, $address, $gender, $message){
 	</html>";
 	$mail->send();
 
-	if($mail) {
-		header("Location: success.html");
-        exit(); // Ensure no further code is executed
-	}
+	// if($mail) {
+	// 	header("Location: success.html");
+    //     exit(); // Ensure no further code is executed
+	// }
 	} catch (Exception $e) {
 		echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 	}
@@ -757,10 +757,10 @@ function sendmessage($name, $email, $phone, $subject, $message){
 
 	$mail->send();
 
-	if($mail) {
-		header("Location: success.html");
-        exit(); // Ensure no further code is executed
-	}
+	// if($mail) {
+	// 	header("Location: success.html");
+    //     exit(); // Ensure no further code is executed
+	// }
 	} catch (Exception $e) {
 		echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 	}

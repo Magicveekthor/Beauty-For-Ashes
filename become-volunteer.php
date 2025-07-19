@@ -33,14 +33,10 @@ if(isset($_POST['submit'])) {
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
-
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&amp;display=swap" rel="stylesheet">
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;family=Fredoka+One&amp;display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;family=Fredoka+One&amp;display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
@@ -214,7 +210,7 @@ if(isset($_POST['submit'])) {
                                             <textarea name="message" placeholder="Write a Comment"></textarea>
                                         </div>
                                         <div class="become-volunteer__btn-box">
-                                            <button type="submit" name="submit" class="thm-btn become-volunteer__btn">Send us a
+                                            <button name="submit" class="thm-btn become-volunteer__btn" id="open-modal">Send us a
                                                 message</button>
                                         </div>
                                     </div>
@@ -398,9 +394,6 @@ if(isset($_POST['submit'])) {
     <script src="assets/vendors/vegas/vegas.min.js"></script>
     <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
     <script src="assets/vendors/timepicker/timePicker.js"></script>
-
-
-
 
     <!-- template js -->
     <script src="assets/js/pifoxen.js"></script>
