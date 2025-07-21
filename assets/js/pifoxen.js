@@ -446,29 +446,29 @@
     });
   }
 
-  if ($(".img-popup").length) {
-    var groups = {};
-    $(".img-popup").each(function () {
-      var id = parseInt($(this).attr("data-group"), 10);
+  // if ($(".img-popup").length) {
+  //   var groups = {};
+  //   $(".img-popup").each(function () {
+  //     var id = parseInt($(this).attr("data-group"), 10);
 
-      if (!groups[id]) {
-        groups[id] = [];
-      }
+  //     if (!groups[id]) {
+  //       groups[id] = [];
+  //     }
 
-      groups[id].push(this);
-    });
+  //     groups[id].push(this);
+  //   });
 
-    $.each(groups, function () {
-      $(this).magnificPopup({
-        type: "image",
-        closeOnContentClick: true,
-        closeBtnInside: false,
-        gallery: {
-          enabled: true
-        }
-      });
-    });
-  }
+  //   $.each(groups, function () {
+  //     $(this).magnificPopup({
+  //       type: "image",
+  //       closeOnContentClick: true,
+  //       closeBtnInside: false,
+  //       gallery: {
+  //         enabled: true
+  //       }
+  //     });
+  //   });
+  // }
 
   function dynamicCurrentMenuClass(selector) {
     let FileName = window.location.href.split("/").reverse()[0];
