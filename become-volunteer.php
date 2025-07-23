@@ -84,6 +84,7 @@ if(isset($_POST['submit'])) {
                             <div class="main-menu-wrapper__call-number">
                                 <p>Call Anytime</p>
                                 <h5><a href="tel:+301 316 8913">+301 316 8913</a></h5>
+                                <h5><a href="tel:+234 816 686 9525">+234 816 686 9525</a></h5>
                             </div>
                         </div>
                     </div>
@@ -210,8 +211,7 @@ if(isset($_POST['submit'])) {
                                             <textarea name="message" placeholder="Write a Comment"></textarea>
                                         </div>
                                         <div class="become-volunteer__btn-box">
-                                            <button name="submit" class="thm-btn become-volunteer__btn" id="open-modal">Send us a
-                                                message</button>
+                                            <button name="submit" class="thm-btn become-volunteer__btn" id="open-modal">Join The Team</button>
                                         </div>
                                     </div>
                                 </div>
@@ -353,6 +353,10 @@ if(isset($_POST['submit'])) {
                 <li>
                     <i class="fa fa-phone-alt"></i>
                     <a href="tel:+301 316 8913"> +301 316 8913</a>
+                </li>
+                <li>
+                    <i class="fa fa-phone-alt"></i>
+                    <a href="tel:+234 816 686 9525">+234 816 686 9525</a>
                 </li>
             </ul><!-- /.mobile-nav__contact -->
             <div class="mobile-nav__top">

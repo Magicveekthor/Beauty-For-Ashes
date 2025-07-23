@@ -86,6 +86,7 @@ if(isset($_POST['submit'])) {
                             <div class="main-menu-wrapper__call-number">
                                 <p>Call Anytime</p>
                                 <h5><a href="tel:+301 316 8913">+301 316 8913</a></h5>
+                                <h5><a href="tel:+234 816 686 9525">+234 816 686 9525</a></h5>
                             </div>
                         </div>
                     </div>
@@ -337,6 +338,10 @@ if(isset($_POST['submit'])) {
                 <li>
                     <i class="fa fa-phone-alt"></i>
                     <a href="tel:+301 316 8913"> +301 316 8913</a>
+                </li>
+                <li>
+                    <i class="fa fa-phone-alt"></i>
+                    <a href="tel:+234 816 686 9525">+234 816 686 9525</a>
                 </li>
             </ul><!-- /.mobile-nav__contact -->
             <div class="mobile-nav__top">
