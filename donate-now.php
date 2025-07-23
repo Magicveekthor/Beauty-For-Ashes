@@ -110,16 +110,34 @@
             <div class="page-header-bg"></div>
             <div class="container">
                 <div class="page-header__inner">
-                    <h2>Donate Now</h2>
+                    <h2>Donations</h2>
                     <ul class="thm-breadcrumb list-unstyled">
                         <li><a href="index.html">Home</a></li>
                         <li><span>/</span></li>
-                        <li class="active">Donate Now</li>
+                        <li class="active">Donations</li>
                     </ul>
                 </div>
             </div>
         </section>
         <!--Page Header End-->
+
+        <!--About Page Start-->
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="about-page__right">
+                            <div class="section-title text-center mb-0">
+                                <span class="section-title__tagline"></span>
+                                <h2 class="section-title__title">Give Hope. Change a Life.</h2>
+                            </div>
+                            <p class="about-page__text text-center">
+                                Your donation helps support widows and the children they care for. Providing food, education, shelter, and a future filled with hope.
+                            </p>
+                        </div>
+                    </div>                   
+                </div>
+            </div>
+        <!--About Page End-->
 
         <!--Donate Now Start-->
         <section class="donate-now">
