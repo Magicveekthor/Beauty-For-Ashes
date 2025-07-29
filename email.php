@@ -30,7 +30,7 @@ function sendvolunteer($name, $email, $phone, $address, $gender, $message){
 
 		//Content
 		$mail->isHTML(true);                                  //Set email format to HTML
-		$mail->Subject = 'Message Notification - Become a Volunteer';
+		$mail->Subject = 'Volunteer Application - Become a Volunteer';
 		$mail->Body = "
 	<!DOCTYPE html>
 	<html lang='en'>
@@ -380,10 +380,10 @@ function sendvolunteer($name, $email, $phone, $address, $gender, $message){
 	</html>";
 	$mail->send();
 
-	// if($mail) {
-	// 	header("Location: success.html");
-    //     exit(); // Ensure no further code is executed
-	// }
+	if($mail) {
+		header("Location: success/volunteer.php");
+        exit(); // Ensure no further code is executed
+	}
 	} catch (Exception $e) {
 		echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 	}
@@ -415,7 +415,7 @@ function sendmessage($name, $email, $phone, $subject, $message){
 
 		//Content
 		$mail->isHTML(true);                                  //Set email format to HTML
-		$mail->Subject = 'Message Notification';
+		$mail->Subject = 'Message Notification - Beauty For Ashes Website';
 		$mail->Body = "
 	<!DOCTYPE html>
 	<html lang='en'>
@@ -757,10 +757,10 @@ function sendmessage($name, $email, $phone, $subject, $message){
 
 	$mail->send();
 
-	// if($mail) {
-	// 	header("Location: success.html");
-    //     exit(); // Ensure no further code is executed
-	// }
+	if($mail) {
+		header("Location: success/contact.php");
+        exit(); // Ensure no further code is executed
+	}
 	} catch (Exception $e) {
 		echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 	}

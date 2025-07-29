@@ -32,10 +32,9 @@ if ($result['status'] && $result['data']['status'] === 'success') {
     #Payment was successful
     $amount = $result['data']['amount'] / 100;
     $email = $result['data']['customer']['email'];
-    echo "<h2>Payment Successful</h2>";
-    echo "Email: $email <br>";
-    echo "Amount: ₦$amount <br>";
-    echo "Reference: " . $result['data']['reference'];
+    // Redirect to success page
+    header("Location: success/donate.php?email=" . urlencode($email) . "&amount=$amount&reference=" . urlencode($reference));
+    exit;
 }  else {
     echo "<h2>Payment Failed or Unverified</h2>";
 }

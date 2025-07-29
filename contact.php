@@ -299,11 +299,12 @@ if(isset($_POST['submit'])) {
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="site-footer__bottom-inner">
-                                <p class="site-footer__bottom-text">© Copyright <script>document.write(new Date().getFullYear());</script> by <a href="#">BracketWeb</a>
+                                <p class="site-footer__bottom-text">© Copyright <script>document.write(new Date().getFullYear());</script> by <a class="author" href="https://www.magicveekthor.com">Magic Veekthor</a>
                                 </p>
                                 <div class="site-footer__social">
-                                    <a href="https://www.facebook.com/profile.php?id=61557053611098&mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
-                                    <a href="https://www.instagram.com/beauty.for.ashes.min?igsh=cHV4a285dHB6MzFj"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.facebook.com/profile.php?id=61557053611098&mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/beauty.for.ashes.min?igsh=cHV4a285dHB6MzFj" target="_blank"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://api.whatsapp.com/send/?phone=%2B2348166869525&text&type=phone_number&app_absent=0" target="_blank"><i class="fab fa-whatsapp"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -357,8 +358,6 @@ if(isset($_POST['submit'])) {
         <!-- /.mobile-nav__content -->
     </div>
     <!-- /.mobile-nav__wrapper -->
-
-    <script> var url = 'https://widget.bot.space/js/widget.js'; var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url; var options = {"enabled":true,"chatButtonSetting":{"backgroundColor":"#13C656","ctaText":"Message Us","borderRadius":"25","marginLeft":"20","marginBottom":"20","marginRight":"20","position":"right"},"brandSetting":{"brandName":"Beauty For Ashes","brandSubTitle":"Typically replies within a day","brandImg":"https://scontent-los2-1.xx.fbcdn.net/v/t39.30808-6/417481299_122101234976235120_8063413191221499980_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFXvUIQY4KgicR72xAbs3vSG7DsCjFdCU8bsOwKMV0JT9gS6fKvZXy_d8qLpA7z4dnfmejvRjICIEbsE74ktrsF&_nc_ohc=ylc9MCtnu-0Q7kNvgG6rnXk&_nc_zt=23&_nc_ht=scontent-los2-1.xx&_nc_gid=AOS3eobNGLIY5yoftN-AQ3u&oh=00_AYCxCv2_t7t7W35kGcGTmgYohCaYa_A67hcYaBgT31JafQ&oe=673A766D","welcomeText":"Hi there! \nHow can I help you?","messageText":"Hello, I have a question.","backgroundColor":"#085E54","ctaText":"Start Chat","borderRadius":"25","autoShow":false,"phoneNumber":"234 816 686 9525"}}; s.onload = function() { CreateWhatsappChatWidget(options); }; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); </script>
 
 
     <script src="assets/vendors/jquery/jquery-3.6.1.min.js"></script>
