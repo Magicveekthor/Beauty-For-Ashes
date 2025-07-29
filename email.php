@@ -391,6 +391,11 @@ function sendvolunteer($name, $email, $phone, $address, $gender, $message){
 
 
 function sendmessage($name, $email, $phone, $subject, $message){
+	// Ensure no output has been sent
+    if (headers_sent()) {
+        die("Headers already sent. Cannot redirect.");
+    }
+	
 	//Load Composer's autoloader
 	require 'vendor/autoload.php';
 
@@ -755,12 +760,12 @@ function sendmessage($name, $email, $phone, $subject, $message){
 		</body>
 	</html>";
 
-	$mail->send();
-
-	if($mail) {
-		header("Location: success/contact.php");
-        exit(); // Ensure no further code is executed
-	}
+	if ($mail->send()) {
+            header("Location: success/contact.php");
+            exit();
+        } else {
+            echo "Message not sent.";
+        }
 	} catch (Exception $e) {
 		echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 	}
