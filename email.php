@@ -1,4 +1,5 @@
 <?php
+ob_start();
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
@@ -388,14 +389,12 @@ function sendvolunteer($name, $email, $phone, $address, $gender, $message){
 		echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 	}
 }
-
-
 function sendmessage($name, $email, $phone, $subject, $message){
 	// Ensure no output has been sent
     if (headers_sent()) {
         die("Headers already sent. Cannot redirect.");
     }
-	
+
 	//Load Composer's autoloader
 	require 'vendor/autoload.php';
 
@@ -770,8 +769,3 @@ function sendmessage($name, $email, $phone, $subject, $message){
 		echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 	}
 }
-
-?>
-
-
-
