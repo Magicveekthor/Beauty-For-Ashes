@@ -8648,7 +8648,6 @@ ul {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url(../images/backgrounds/page-header-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -8656,6 +8655,26 @@ ul {
   /* background-blend-mode: luminosity; */
   opacity: 0.5;
   z-index: -1;
+}
+
+.page-header-bg.gallery {
+  background-image: url(../images/backgrounds/contact.jpg);
+}
+
+.page-header-bg.about {
+  background-image: url(../images/backgrounds/about.jpg);
+}
+
+.page-header-bg.volunteer {
+  background-image: url(../images/backgrounds/volunteer.jpg);
+}
+
+.page-header-bg.donation {
+  background-image: url(../images/backgrounds/donation.jpg);
+}
+
+.page-header-bg.contact {
+  background-image: url(../images/backgrounds/contact.jpg);
 }
 
 .page-header__inner {

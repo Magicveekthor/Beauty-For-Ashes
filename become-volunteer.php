@@ -125,7 +125,7 @@ if(isset($_POST['submit'])) {
 
         <!--Page Header Start-->
         <section class="page-header">
-            <div class="page-header-bg"></div>
+            <div class="page-header-bg volunteer"></div>
             <div class="container">
                 <div class="page-header__inner">
                     <h2>Become a Volunteer</h2>

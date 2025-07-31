@@ -107,7 +107,7 @@
 
         <!--Page Header Start-->
         <section class="page-header">
-            <div class="page-header-bg"></div>
+            <div class="page-header-bg donation"></div>
             <div class="container">
                 <div class="page-header__inner">
                     <h2>Donations</h2>
