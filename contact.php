@@ -149,7 +149,7 @@ if(isset($_POST['submit'])) {
                         <div class="contact-page__left">
                             <div class="section-title text-left">
                                 <span class="section-title__tagline">Contact with us</span>
-                                <h2 class="section-title__title">Get in Touch With us</h2>
+                                <h2 class="section-title__title">We'd Love To Hear From You!</h2>
                             </div>
                             <div class="contact-page__social">
                                 <a href="https://www.facebook.com/profile.php?id=61557053611098&mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>

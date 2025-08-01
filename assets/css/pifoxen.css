@@ -8658,7 +8658,8 @@ ul {
 }
 
 .page-header-bg.gallery {
-  background-image: url(../images/backgrounds/contact.jpg);
+  background-image: url(../images/backgrounds/gallery.jpg);
+  background-position: top;
 }
 
 .page-header-bg.about {
