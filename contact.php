@@ -134,7 +134,7 @@ if(isset($_POST['submit'])) {
                     <ul class="thm-breadcrumb list-unstyled">
                         <li><a href="index.html">Home</a></li>
                         <li><span>/</span></li>
-                        <li class="active">Contact</li>
+                        <li class="active">Contact Us</li>
                     </ul>
                 </div>
             </div>
@@ -148,7 +148,7 @@ if(isset($_POST['submit'])) {
                     <div class="col-xl-4 col-lg-5">
                         <div class="contact-page__left">
                             <div class="section-title text-left">
-                                <span class="section-title__tagline">Contact with us</span>
+                                <span class="section-title__tagline">Connect with us</span>
                                 <h2 class="section-title__title">We'd Love To Hear From You!</h2>
                             </div>
                             <div class="contact-page__social">
