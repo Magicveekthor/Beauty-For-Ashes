@@ -1219,8 +1219,8 @@
     }
 
     .main-slider h2 {
-        font-size: 45px;
-        line-height: 55px;
+        font-size: 27px;
+        line-height: 30px;
     }
 
     .main-slider h2 span:before {
@@ -1228,7 +1228,10 @@
     }
 
     .main-slider p {
-        padding-top: 32px;
+        font-size: 15px;
+        padding-top: 13px;
+        line-height: 20px;
+    }
     }
 
     .main-slider-two h2 br {
