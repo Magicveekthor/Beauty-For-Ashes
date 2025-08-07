@@ -13,10 +13,18 @@ if(isset($_POST['submit'])) {
 
     $gender = filter_var($_POST['gender'], FILTER_SANITIZE_STRING);
 
+    $volunteerArray = isset($_POST['volunteer']) ? $_POST['volunteer'] : [];
+    # Filter each value in the array
+    $volunteerArray = array_map(function($item) {
+        return filter_var($item, FILTER_SANITIZE_STRING);
+    }, $volunteerArray);
+    # Convert to comma-separated string
+    $volunteer = implode(' , ', $volunteerArray);
+
     $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
 
     //Send Volunteer message
-    sendvolunteer($name, $email, $phone, $address, $gender, $message);
+    sendvolunteer($name, $email, $phone, $address, $gender, $volunteer, $message);
 }
 ?>
 
@@ -38,6 +46,7 @@ if(isset($_POST['submit'])) {
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;family=Fredoka+One&amp;display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+    <link rel="stylesheet" href="assets/css/virtual-select.css">
     <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
     <link rel="stylesheet" href="assets/vendors/animate/custom-animate.css" />
@@ -112,9 +121,6 @@ if(isset($_POST['submit'])) {
                             <li><a href="contact.php">Contact</a></li>
                         </ul>
                     </div>
-                    <div class="main-menu-wrapper__right">
-                        <a href="donate-now.php" class="donate-btn main-menu-wrapper__btn"> <i class="fa fa-heart"></i>Donate Now</a>
-                    </div>
                 </div>
             </nav>
         </header>
@@ -153,11 +159,6 @@ if(isset($_POST['submit'])) {
                                     <div class="col-xl-12 col-lg-6 col-md-6">
                                         <div class="become-volunteer__img-single">
                                             <img src="assets/images/resources/become-volunteer-img-1.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-12 col-lg-6 col-md-6">
-                                        <div class="become-volunteer__img-single">
-                                            <img src="assets/images/resources/become-volunteer-img-2.jpg" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -208,8 +209,20 @@ if(isset($_POST['submit'])) {
                                         </div>
                                     </div>
                                     <div class="col-xl-12">
+                                       <div class="comment-form__input-box">
+                                            <select class="vscomp-ele" multiple id="multipleSelect" name="volunteer[]" placeholder="Please Tick Your Desired Area(s) Of Participation" data-search="false" data-silent-initial-value-set="true">
+                                                <option value="Prayer Partner">Prayer Partner</option>
+                                                <option value="Financial Partner">Financial Partner</option>
+                                                <option value="Expertise Partner">Expertise Partner</option>
+                                                <option value="Administrative Partner">Administrative Partner</option>
+                                                <option value="Others">Others</option>
+                                            </select>
+                                        </div> 
+                                    </div>
+                                    
+                                    <div class="col-xl-12">
                                         <div class="become-volunteer__input become-volunteer__message-box">
-                                            <textarea name="message" placeholder="Write a Comment"></textarea>
+                                            <textarea name="message" placeholder="If Others...Kindly indicate here"></textarea>
                                         </div>
                                         <div class="become-volunteer__btn-box">
                                             <button name="submit" class="thm-btn become-volunteer__btn" id="open-modal">Join The Team!</button>
@@ -377,6 +390,7 @@ if(isset($_POST['submit'])) {
 
 
     <script src="assets/vendors/jquery/jquery-3.6.1.min.js"></script>
+    <script src="assets/js/virtual-select.js"></script>
     <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendors/jarallax/jarallax.min.js"></script>
     <script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
@@ -399,6 +413,11 @@ if(isset($_POST['submit'])) {
     <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
     <script src="assets/vendors/timepicker/timePicker.js"></script>
 
+       <script type="text/javascript">
+            VirtualSelect.init({ 
+                ele: '#multipleSelect' 
+            });
+        </script>
     <!-- template js -->
     <script src="assets/js/pifoxen.js"></script>
 </body>

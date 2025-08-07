@@ -3035,6 +3035,7 @@ ul {
 .welcome-one__img {
   position: relative;
   display: block;
+  height: 300px;
   overflow: hidden;
   border-radius: var(--pifoxen-bdr-radius);
 }
@@ -3061,6 +3062,7 @@ ul {
 
 .welcome-one__img img {
   width: 100%;
+  object-fit: cover;
   border-radius: var(--pifoxen-bdr-radius);
 }
 

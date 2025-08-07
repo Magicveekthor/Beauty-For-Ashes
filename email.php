@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-function sendvolunteer($name, $email, $phone, $address, $gender, $message){
+function sendvolunteer($name, $email, $phone, $address, $gender, $volunteer, $message){
 	//Load Composer's autoloader
 	require 'vendor/autoload.php';
 
@@ -352,6 +352,16 @@ function sendvolunteer($name, $email, $phone, $address, $gender, $message){
 									<td class='text-services'>
 										<h3>Gender</h3>
 										<p>$gender</p>
+									</td>
+								</tr>
+								</table>
+							</td>
+							<tr><td valign='top' width='50%' style='padding-top: 20px;'>
+								<table role='presentation' cellspacing='0' cellpadding='0' border='0' width='100%'>
+								<tr>
+									<td class='text-services'>
+										<h3> Desired Area(s) Of Participation</h3>
+										<p>$volunteer</p>
 									</td>
 								</tr>
 								</table>

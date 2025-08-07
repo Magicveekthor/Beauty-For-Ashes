@@ -94,9 +94,6 @@
                             <li><a href="contact.php">Contact</a></li>
                         </ul>
                     </div>
-                    <div class="main-menu-wrapper__right">
-                        <a href="donate-now.php" class="donate-btn main-menu-wrapper__btn"> <i class="fa fa-heart"></i>Donate Now</a>
-                    </div>
                 </div>
             </nav>
         </header>
