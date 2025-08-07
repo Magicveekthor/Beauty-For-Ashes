@@ -127,7 +127,7 @@ if(isset($_POST['submit'])) {
         <div class="page-header-bg contact"></div>
             <div class="container">
                 <div class="page-header__inner">
-                    <h2>Contact</h2>
+                    <h2>Contact Us</h2>
                     <ul class="thm-breadcrumb list-unstyled">
                         <li><a href="index.html">Home</a></li>
                         <li><span>/</span></li>
