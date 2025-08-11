@@ -4611,10 +4611,20 @@ ul {
   margin-top: 20px;
 }
 
+@media (max-width: 550px) {
+  .summary {
+    margin-top: -10px !important;
+  }
+}
+
 @media (min-width: 576px) {
   .tab-content__inner .tab-content__image img {
     margin-top: 0;
     margin-bottom: 0;
+  }
+
+  .summary {
+    margin-top: 10px !important;
   }
 }
 

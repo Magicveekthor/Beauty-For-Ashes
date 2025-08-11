@@ -161,6 +161,11 @@ if(isset($_POST['submit'])) {
                                             <img src="assets/images/resources/become-volunteer-img-1.jpg" alt="">
                                         </div>
                                     </div>
+                                    <div class="col-xl-12 col-lg-6 col-md-6">
+                                        <div class="become-volunteer__img-single">
+                                            <img src="assets/images/resources/become-volunteer-img-2.jpg" alt="">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="become-volunteer__content">
