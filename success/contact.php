@@ -157,7 +157,7 @@
             <div class="mobile-nav__top">
                 <div class="mobile-nav__social">
                     <a href="https://www.facebook.com/profile.php?id=61557053611098&mibextid=ZbWKwL" aria-label="facebook social media link"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/beauty.for.ashes.min?igsh=cHV4a285dHB6MzFj" aria-label="instagram social media link"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/beautyforashes_min?igsh=aXFkYmIzajRjc2gx" aria-label="instagram social media link"><i class="fab fa-instagram"></i></a>
                 </div><!-- /.mobile-nav__social -->
             </div><!-- /.mobile-nav__top -->
 
