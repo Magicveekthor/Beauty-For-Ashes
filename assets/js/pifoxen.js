@@ -887,7 +887,7 @@
       $(".filter-layout").isotope({
         filter: ".filter-item",
         animationOptions: {
-          duration: 500,
+          duration: 200,
           easing: "linear",
           queue: false
         }

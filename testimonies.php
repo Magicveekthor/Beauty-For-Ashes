@@ -1,39 +1,9 @@
-<?php
-#include the email.php
-include_once "email.php";
-
-if(isset($_POST['submit'])) {
-    $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
-
-    $email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
-
-    $phone = filter_var($_POST['phone'], FILTER_SANITIZE_STRING);
-
-    $address = filter_var($_POST['address'], FILTER_SANITIZE_STRING);
-
-    $gender = filter_var($_POST['gender'], FILTER_SANITIZE_STRING);
-
-    $volunteerArray = isset($_POST['volunteer']) ? $_POST['volunteer'] : [];
-    # Filter each value in the array
-    $volunteerArray = array_map(function($item) {
-        return filter_var($item, FILTER_SANITIZE_STRING);
-    }, $volunteerArray);
-    # Convert to comma-separated string
-    $volunteer = implode(' , ', $volunteerArray);
-
-    $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
-
-    //Send Volunteer message
-    sendvolunteer($name, $email, $phone, $address, $gender, $volunteer, $message);
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Become a Volunteer || Beauty For Ashes</title>
+    <title> Testimonials || Beauty For Ashes</title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/resources/logo.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/resources/logo.png" />
@@ -41,12 +11,15 @@ if(isset($_POST['submit'])) {
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;family=Fredoka+One&amp;display=swap" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <link rel="stylesheet" href="assets/css/virtual-select.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&amp;display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;family=Fredoka+One&amp;display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
     <link rel="stylesheet" href="assets/vendors/animate/custom-animate.css" />
@@ -133,120 +106,142 @@ if(isset($_POST['submit'])) {
 
         <!--Page Header Start-->
         <section class="page-header">
-            <div class="page-header-bg volunteer"></div>
+            <div class="page-header-bg about"></div>
             <div class="container">
                 <div class="page-header__inner">
-                    <h2>Become a Volunteer</h2>
+                    <h2>About Us</h2>
                     <ul class="thm-breadcrumb list-unstyled">
                         <li><a href="index.html">Home</a></li>
                         <li><span>/</span></li>
-                        <li class="active">Volunteers</li>
+                        <li class="active">About Us</li>
                     </ul>
                 </div>
             </div>
         </section>
         <!--Page Header End-->
 
-        <!--Become Volunteer Start-->
-        <section class="become-volunteer">
+        <!--Gallery Page Start-->
+        <section class="gallery-page">
             <div class="container">
                 <div class="row">
-                    <h3 class="become-volunteer__title">Become a Volunteer</h3>
-                </div>
-                <div class="row">
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="become-volunteer__Left">
-                            <div class="become-volunteer__images">
-                                <div class="row">
-                                    <div class="col-xl-12 col-lg-6 col-md-6">
-                                        <div class="become-volunteer__img-single">
-                                            <img src="assets/images/resources/become-volunteer-img-1.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-12 col-lg-6 col-md-6">
-                                        <div class="become-volunteer__img-single">
-                                            <img src="assets/images/resources/become-volunteer-img-2.jpg" alt="">
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="two-section__gallery-single">
+                            <div class="two-section__gallery-img-inner">
+                                <img src="assets/images/letters/beautyforashes_1.jpg" alt="">
                             </div>
-                            <div class="become-volunteer__content">
-                                <div class="become-volunteer__contact">
-                                    <p>
-                                        <a href="tel:+301 316 8913" class="become-volunteer__phone">+301 316 8913 (Headquarters)</a>
-                                        <a href="tel:+301 316 8913" class="become-volunteer__phone">+234 816 686 9525 (Nigeria)</a>
-                                        <a href="mailto:admin@beautyforashesint.org"
-                                            class="become-volunteer__email">admin@beautyforashesint.org</a>
-                                    </p>
-                                </div>
+                            <div class="two-section__gallery-img-overly">
+                                <a class="img-gallery" href="assets/images/letters/beautyforashes_1.jpg">
+                                    <span class="icon-right-arrow"></span>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="become-volunteer__right">
-                            <form class="become-volunteer__form" method="post">
-                                <div class="row">
-                                    <div class="col-xl-12">
-                                        <div class="become-volunteer__input">
-                                            <input type="text" placeholder="Your Name" name="name">
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-12">
-                                        <div class="become-volunteer__input">
-                                            <input type="email" placeholder="Email Address" name="email">
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-12">
-                                        <div class="become-volunteer__input">
-                                            <input type="text" placeholder="Phone Number" name="phone">
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-12">
-                                        <div class="become-volunteer__input">
-                                            <input type="text" placeholder="Address" name="address">
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-12">
-                                        <div class="comment-form__input-box">
-                                            <select name="gender" title="gender">
-                                                <option value="" disabled selected>Gender</option>
-                                                <option value="Male">Male</option>
-                                                <option value="Female">Female</option>
-                                            </select><!-- /# -->
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-12">
-                                       <div class="comment-form__input-box">
-                                            <select class="vscomp-ele" multiple id="multipleSelect" name="volunteer[]" placeholder="Please Tick Your Desired Area(s) Of Participation" data-search="false" data-silent-initial-value-set="true">
-                                                <option value="Prayer Partner">Prayer Partner</option>
-                                                <option value="Financial Partner">Financial Partner</option>
-                                                <option value="Expertise Partner">Expertise Partner</option>
-                                                <option value="Administrative Partner">Administrative Partner</option>
-                                                <option value="Others">Others</option>
-                                            </select>
-                                        </div> 
-                                    </div>
-                                    
-                                    <div class="col-xl-12">
-                                        <div class="become-volunteer__input become-volunteer__message-box">
-                                            <textarea name="message" placeholder="If Others...Kindly indicate here"></textarea>
-                                        </div>
-                                        <div class="become-volunteer__btn-box">
-                                            <button name="submit" class="thm-btn become-volunteer__btn" id="open-modal">Join The Team!</button>
-                                        </div>
-                                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="two-section__gallery-single">
+                            <div class="two-section__gallery-img-inner">
+                                <img src="assets/images/letters/beautyforashes_2.jpg" alt="">
+                            </div>
+                            <div class="two-section__gallery-img-overly">
+                                <a class="img-gallery" href="assets/images/letters/beautyforashes_2.jpg">
+                                    <span class="icon-right-arrow"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="two-section__gallery-single">
+                            <div class="two-section__gallery-img-inner">
+                                <img src="assets/images/letters/beautyforashes_3.jpg" alt="">
+                            </div>
+                            <div class="two-section__gallery-img-overly">
+                                <div class="two-section__gallery-icon-bg">
                                 </div>
-                            </form>
+                                <a class="img-gallery" href="assets/images/letters/beautyforashes_3.jpg">
+                                    <span class="icon-right-arrow"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="two-section__gallery-single">
+                            <div class="two-section__gallery-img-inner">
+                                <img src="assets/images/letters/beautyforashes_4.jpg" alt="">
+                            </div>
+                            <div class="two-section__gallery-img-overly">
+                                <a class="img-gallery" href="assets/images/letters/beautyforashes_4.jpg">
+                                    <span class="icon-right-arrow"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="two-section__gallery-single">
+                            <div class="two-section__gallery-img-inner">
+                                <img src="assets/images/letters/beautyforashes_7.jpg" alt="">
+                            </div>
+                            <div class="two-section__gallery-img-overly">
+                                <a class="img-gallery" href="assets/images/letters/beautyforashes_7.jpg">
+                                    <span class="icon-right-arrow"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="two-section__gallery-single">
+                            <div class="two-section__gallery-img-inner">
+                                <img src="assets/images/letters/beautyforashes_8.jpg" alt="">
+                            </div>
+                            <div class="two-section__gallery-img-overly">
+                                <a class="img-gallery" href="assets/images/letters/beautyforashes_8.jpg">
+                                    <span class="icon-right-arrow"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="two-section__gallery-single">
+                            <div class="two-section__gallery-img-inner">
+                                <img src="assets/images/letters/beautyforashes_9.jpg" alt="">
+                            </div>
+                            <div class="two-section__gallery-img-overly">
+                                <a class="img-gallery" href="assets/images/letters/beautyforashes_9.jpg">
+                                    <span class="icon-right-arrow"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="two-section__gallery-single">
+                            <div class="two-section__gallery-img-inner">
+                                <img src="assets/images/letters/beautyforashes_10.jpg" alt="">
+                            </div>
+                            <div class="two-section__gallery-img-overly">
+                                <a class="img-gallery" href="assets/images/letters/beautyforashes_10.jpg">
+                                    <span class="icon-right-arrow"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="two-section__gallery-single">
+                            <div class="two-section__gallery-img-inner">
+                                <img src="assets/images/letters/beautyforashes_12.jpg" alt="">
+                            </div>
+                            <div class="two-section__gallery-img-overly">
+                                <a class="img-gallery" href="assets/images/letters/beautyforashes_12.jpg">
+                                    <span class="icon-right-arrow"></span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!--Become Volunteer End-->
+        <!--Gallery Page End-->
 
         <!--Site Footer Start-->
         <footer class="site-footer">
-            <div class="site-footer-bg" style="background-image: url(assets/images/backgrounds/site-footer-bg.jpg);">
+            <div class="site-footer-bg">
             </div>
             <div class="site-footer__top">
                 <div class="container">
@@ -351,6 +346,8 @@ if(isset($_POST['submit'])) {
         <!--Site Footer End-->
 
 
+
+
     </div><!-- /.page-wrapper -->
 
 
@@ -383,8 +380,8 @@ if(isset($_POST['submit'])) {
             </ul><!-- /.mobile-nav__contact -->
             <div class="mobile-nav__top">
                 <div class="mobile-nav__social">
-                    <a href="https://www.facebook.com/profile.php?id=61557053611098&mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/beautyforashes_min?igsh=aXFkYmIzajRjc2gx"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61557053611098&mibextid=ZbWKwL" aria-label="social media links"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/beautyforashes_min?igsh=aXFkYmIzajRjc2gx" aria-label="social media links"><i class="fab fa-instagram"></i></a>
                 </div><!-- /.mobile-nav__social -->
             </div><!-- /.mobile-nav__top -->
 
@@ -395,9 +392,7 @@ if(isset($_POST['submit'])) {
     </div>
     <!-- /.mobile-nav__wrapper -->
 
-
     <script src="assets/vendors/jquery/jquery-3.6.1.min.js"></script>
-    <script src="assets/js/virtual-select.js"></script>
     <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendors/jarallax/jarallax.min.js"></script>
     <script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
@@ -420,12 +415,36 @@ if(isset($_POST['submit'])) {
     <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
     <script src="assets/vendors/timepicker/timePicker.js"></script>
 
-       <script type="text/javascript">
-            VirtualSelect.init({ 
-                ele: '#multipleSelect' 
-            });
-        </script>
+
+
+
     <!-- template js -->
     <script src="assets/js/pifoxen.js"></script>
+
+    <script>
+        if ($(".img-gallery").length) {
+            var groups = {};
+            $(".img-gallery").each(function () {
+            var id = parseInt($(this).attr("data-group"), 10);
+
+            if (!groups[id]) {
+                groups[id] = [];
+            }
+
+            groups[id].push(this);
+            });
+
+            $.each(groups, function () {
+            $(this).magnificPopup({
+                type: "image",
+                closeOnContentClick: true,
+                closeBtnInside: false,
+                gallery: {
+                enabled: true
+                }
+            });
+            });
+        }
+    </script>
 </body>
 </html>

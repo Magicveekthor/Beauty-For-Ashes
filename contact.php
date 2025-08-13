@@ -103,15 +103,17 @@ if(isset($_POST['submit'])) {
                                 <a href="gallery.html">Gallery</a>
                             </li>
                             <li class="dropdown">
+                                <a href="testimonies.php">Testimonials</a>
+                            </li>
+                            <li class="dropdown">
                                 <a href="become-volunteer.php">Volunteer</a>
                             </li>
                             <li class="dropdown">
                                 <a href="donate-now.php">Donations</a>
                             </li>
-                            <!-- <li class="dropdown">
-                                <a href="blog.html">Blog</a>
-                            </li> -->
-                            <li><a href="contact.php">Contact</a></li>
+                            <li>
+                                <a href="contact.php">Contact</a>
+                            </li>
                         </ul>
                     </div>
                 </div>

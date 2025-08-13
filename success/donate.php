@@ -73,24 +73,26 @@
                         <a href="#" class="mobile-nav__toggler" aria-label="Links"><i class="fa fa-bars"></i></a>
                         <ul class="main-menu__list">
                             <li class="dropdown megamenu">
-                                <a href="../index.html">Home</a>
+                                <a href="index.html">Home</a>
                             </li>
                             <li class="dropdown">
-                                <a href="../about.html">About</a>
+                                <a href="about.html">About</a>
                             </li>
                             <li class="dropdown">
-                                <a href="../gallery.html">Gallery</a>
+                                <a href="gallery.html">Gallery</a>
                             </li>
                             <li class="dropdown">
-                                <a href="../become-volunteer.php">Volunteer</a>
+                                <a href="testimonies.php">Testimonials</a>
                             </li>
                             <li class="dropdown">
-                                <a href="../donate-now.php">Donations</a>
+                                <a href="become-volunteer.php">Volunteer</a>
                             </li>
-                            <!-- <li class="dropdown">
-                                <a href="blog.html">Blog</a>
-                            </li> -->
-                            <li><a href="../contact.php">Contact</a></li>
+                            <li class="dropdown">
+                                <a href="donate-now.php">Donations</a>
+                            </li>
+                            <li>
+                                <a href="contact.php">Contact</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="main-menu-wrapper__right">
